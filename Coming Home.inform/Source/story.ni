@@ -4,7 +4,7 @@ Chapter 1 New Kinds
 
 Section 1.1 The Staircase
 
-A staircase is a kind of door. A staircase is usually open. A staircase is seldom openable. A staircase is scenery.
+A staircase is a kind of door. A staircase is usually open. A staircase is seldom openable. [A staircase is scenery.]
 Instead of climbing a staircase: 
     try entering the noun. 
 
@@ -35,25 +35,30 @@ Carry out sitting on a chair:
 Report sitting on a chair:
 	say "You feel confortable".
 
+Section 1.3 Trap
+
+A trap is a kind of container. A trap can be open and closed. A trap is seldom openable.
+Instead of taking trap, say "You should try open the trap."
+
 Chapter 2 Geography
 
 Section 2.1 Rooms
 
-Porch is a room.  
-Hall is a room. 
-Living Room is a room. 
-Garage is a room. 
-Kitchen is a room. "Texto antes da Kitchen."
-Dining Room is a room. 
-Home Office is a room. 
-Lavabo is a room.  "Texto antes do Lavabo."
+Porch is a room. "Descrição Porch."
+Hall is a room. "Descrição Hall." 
+Living Room is a room. "Descrição Living Room." 
+Garage is a room. "Descrição Garage." 
+Kitchen is a room. "Descrição Kitchen."
+Dining Room is a room.  "Descrição Dining Room."
+Home Office is a room.   "Descrição Home Office."
+Lavabo is a room.  "Descrição Lavabo."
 Stairs is a staircase. It is above Hall and below Upper Hall. 
-Upper Hall is a room.  
-Large Bedroom is a room. 
-Medium Bedroom is a room.  
-Small Bedroom is a room. 
-Bathroom is a room. 
-Inner Bathroom is a room. 
+Upper Hall is a room.   "Descrição Upper Hall."
+Large Bedroom is a room.  "Descrição Large Bedroom."
+Medium Bedroom is a room.   "Descrição Medium Bedroom."
+Small Bedroom is a room.  "Descrição Small Bedroom."
+Bathroom is a room.  "Descrição Bathroom."
+Inner Bathroom is a room.  "Descrição Inner Bathroom."
 
 Section 2.2 Doors
 
@@ -110,6 +115,10 @@ candle, string are in Old box.
 
 bucket is in Porch.
 
+A bear trap is a trap. It is in the Porch. 
+dog is in the bear trap.
+After opening bear trap, say "Au, Au, Au."
+
 Section 3.2 On the Hall
 
 Wooden Table is in Hall.
@@ -139,23 +148,108 @@ After taking strange photograph, say "Hey, Vsauce 2."
 
 Section 3.5 On the Kitchen
 
+Furnace is in Kitchen.
+Furnace is supporter.
+
+old pressure cooker is a thing.
+old pressure cooker is on Furnace.
+
+Simple Table is in Kitchen.
+Simple Table is supporter.
+
+Orange Key is on Simple Table. "Hey, Hey, Hey."
+
+dirty napkin is on Simple Table.
+
+Cabinet is in Kitchen.
+Cabinet is container.
+
 Section 3.6 On the Garage
+
+deflated ball is a thing.
+deflated ball is in Garage.
+
+wooden planks is a thing.
+wooden planks is in Garage. 
+
+A homeless is a man. It is in the Garage.
 
 Section 3.7 On the Lavabo
 
+Old Mirror is in Lavabo.
+
+Toilet is in Lavabo.
+
+dirty towel is in Lavabo.
+
+Wash Basin is in Lavabo.
+
 Section 3.8 On the Home Office
+
+Safe Box is in Home Office.
+Safe Box is container. It is locked.
+
+ruby stone is in Safe Box.
+
+battery is in Safe Box.
+
+Writing Desk is in Home Office.
+Writing Desk is supporter.
+
+mysterious photograph is on Writing Desk.
 
 Section 3.9 On the Upper Hall
 
+Stone Statue is in Upper Hall.
+
 Section 3.10 On the Inner Bathroom
 
+Marble Wash Basin is in Inner Bathroom. It is supporter.
+Soap is on Marble Wash Basin.
+
+Bathtub is in Inner Bathroom.
+
+Dirty Mirror is in Inner Bathroom.
+
+Marble Toilet is in Inner Bathroom.
+
 Section 3.11 On the Large Bedroom
+
+Beautiful Painting is in Large Bedroom.
+
+Large Bed is in Large Bedroom.
+
+Wardrobe is in Large Bedroom. 
+Wardrobe is container.
+
+moldy shirt is a thing. 
+moldy shirt is in Wardrobe.
 
 Section 3.12 On the Medium Bedroom
 
 Section 3.13 On the Small Bedroom
 
+Small Bed is in Small Bedroom.
+Small Bed is supporter.
+
+Little Girl's Corpse is a thing.
+Little Girl's Corpse is on Small Bed. [Isso tem que ser fixo]
+
+Small Wardrobe is in Small Bedroom.
+Small Wardrome is container.
+
+pink dress is on Small Wardrobe.
+
 Section 3.14 On the Bathroom
+
+Stained Bathtub is in Bathroom.
+
+Old Man's Corpse is a thing.
+Old Man's Corpse is on Stained Bathtub.
+
+Wrinkled Clothes is in Bathroom.
+
+White Key is in Wrinkled Clothes.
 
 Chapter 4 What Happens when entering
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-24"/>
+  <activeNode nodeId="node-60"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Coming Home</command>
-    <result xml:space="preserve">A chilling wind blows in the late afternoon&#x000A;Coming Home&#x000A;An Interactive Fiction by Cl&#x00F3;vis, Ramiro and Pedro&#x000A;Release 1 / Serial number 190811 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Porch&#x000A;You can see Main door, Main key, Wooden chair, Old box (in which are candle and string) and bucket (empty) here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">A chilling wind blows in the late afternoon&#x000A;Coming Home&#x000A;An Interactive Fiction by Cl&#x00F3;vis, Ramiro and Pedro&#x000A;Release 1 / Serial number 190812 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Porch&#x000A;Descri&#x00E7;&#x00E3;o Porch.&#x000A;&#x000A;You can see Main door, Main key, Wooden chair, Old box (in which are candle and string), bucket (empty) and a bear trap (in which is dog) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -12,6 +12,12 @@
       <child nodeId="node-3"/>
       <child nodeId="node-9"/>
       <child nodeId="node-20"/>
+      <child nodeId="node-33"/>
+      <child nodeId="node-36"/>
+      <child nodeId="node-40"/>
+      <child nodeId="node-43"/>
+      <child nodeId="node-46"/>
+      <child nodeId="node-47"/>
     </children>
   </item>
   <item nodeId="node-2">
@@ -92,14 +98,15 @@
   </item>
   <item nodeId="node-11">
     <command xml:space="preserve">enter main door</command>
-    <result xml:space="preserve">(first opening Main door)&#x000A;&#x000A;Hall&#x000A;You can see Main door and Wooden Table (on which is family photograph) here.&#x000A;&#x000A;The inside smells as bad news...&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">(first opening Main door)&#x000A;&#x000A;Hall&#x000A;You can see Gray door, Main door, Red door and Wooden Table (on which is family photograph) here.&#x000A;&#x000A;The inside smells as bad news...&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-12"/>
       <child nodeId="node-13"/>
       <child nodeId="node-14"/>
       <child nodeId="node-15"/>
+      <child nodeId="node-25"/>
     </children>
   </item>
   <item nodeId="node-12">
@@ -123,6 +130,75 @@
   <item nodeId="node-15">
     <command xml:space="preserve">go north</command>
     <result xml:space="preserve">Living Room&#x000A;Algu&#x00E9;m est&#x00E1; gritando pedindo ajuda.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-25">
+    <command xml:space="preserve">examine family photograph</command>
+    <result xml:space="preserve">You see nothing special about family photograph.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-26"/>
+    </children>
+  </item>
+  <item nodeId="node-26">
+    <command xml:space="preserve">take</command>
+    <result xml:space="preserve">What do you want to take?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-27"/>
+    </children>
+  </item>
+  <item nodeId="node-27">
+    <command xml:space="preserve">take family photograph</command>
+    <result xml:space="preserve">Hey, Vsauce.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-28"/>
+    </children>
+  </item>
+  <item nodeId="node-28">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Hall&#x000A;You can see Gray door, Main door, Red door and Wooden Table here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-29"/>
+    </children>
+  </item>
+  <item nodeId="node-29">
+    <command xml:space="preserve">enter red door</command>
+    <result xml:space="preserve">(first opening Red door)&#x000A;&#x000A;Living Room&#x000A;You can see White door, Red door, Brown door and Yellow door here.&#x000A;&#x000A;Algu&#x00E9;m est&#x00E1; gritando pedindo ajuda.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-30"/>
+    </children>
+  </item>
+  <item nodeId="node-30">
+    <command xml:space="preserve">enter brown door</command>
+    <result xml:space="preserve">(first opening Brown door)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-31"/>
+    </children>
+  </item>
+  <item nodeId="node-31">
+    <command xml:space="preserve">enter white door</command>
+    <result xml:space="preserve">(first opening White door)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-32"/>
+    </children>
+  </item>
+  <item nodeId="node-32">
+    <command xml:space="preserve">enter yellow door</command>
+    <result xml:space="preserve">(first opening Yellow door)&#x000A;&#x000A;Dining Room&#x000A;You can see Yellow door, Green door, Large Wooden Table (on which is fresh apple), Old Chair and Shelf (on which is strange photograph) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -198,6 +274,240 @@
   <item nodeId="node-24">
     <command xml:space="preserve">enter stair</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-33">
+    <command xml:space="preserve">dog</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-34"/>
+    </children>
+  </item>
+  <item nodeId="node-34">
+    <command xml:space="preserve">look to dog</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-35"/>
+    </children>
+  </item>
+  <item nodeId="node-35">
+    <command xml:space="preserve">talk to dog</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-36">
+    <command xml:space="preserve">take frank</command>
+    <result xml:space="preserve">I don't suppose Frank would care for that.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-37"/>
+    </children>
+  </item>
+  <item nodeId="node-37">
+    <command xml:space="preserve">hi frank</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-38"/>
+    </children>
+  </item>
+  <item nodeId="node-38">
+    <command xml:space="preserve">take candle</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-39"/>
+    </children>
+  </item>
+  <item nodeId="node-39">
+    <command xml:space="preserve">give candle</command>
+    <result xml:space="preserve">(to Frank)&#x000A;Frank doesn't seem interested.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-40">
+    <command xml:space="preserve">take candle</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-41"/>
+    </children>
+  </item>
+  <item nodeId="node-41">
+    <command xml:space="preserve">give</command>
+    <result xml:space="preserve">(the homeless candle)&#x000A;The homeless doesn't seem interested.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-42"/>
+    </children>
+  </item>
+  <item nodeId="node-42">
+    <command xml:space="preserve">give homeless</command>
+    <result xml:space="preserve">(to yourself)&#x000A;(first taking the homeless man)&#x000A;You can't give the homeless man to yourself.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-43">
+    <command xml:space="preserve">take dog</command>
+    <result xml:space="preserve">N&#x00E3;o d&#x00E1; n&#x00E3;o, colega.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-44"/>
+    </children>
+  </item>
+  <item nodeId="node-44">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Porch&#x000A;Descri&#x00E7;&#x00E3;o Porch.&#x000A;&#x000A;You can see Main door, Main key, Wooden chair, Old box (in which are candle and string), bucket (empty) and a dog here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-45"/>
+    </children>
+  </item>
+  <item nodeId="node-45">
+    <command xml:space="preserve">help dog</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-46">
+    <command xml:space="preserve">open bear trap</command>
+    <result xml:space="preserve">It isn't something you can open.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-47">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Porch&#x000A;Descri&#x00E7;&#x00E3;o Porch.&#x000A;&#x000A;You can see Main door, Main key, Wooden chair, Old box (in which are candle and string), bucket (empty) and a bear trap (in which is dog) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-48"/>
+    </children>
+  </item>
+  <item nodeId="node-48">
+    <command xml:space="preserve">take trap</command>
+    <result xml:space="preserve">You should try open the trap.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-49"/>
+    </children>
+  </item>
+  <item nodeId="node-49">
+    <command xml:space="preserve">help dog</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-50"/>
+    </children>
+  </item>
+  <item nodeId="node-50">
+    <command xml:space="preserve">unlock trap</command>
+    <result xml:space="preserve">What do you want to unlock the bear trap with?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-51"/>
+    </children>
+  </item>
+  <item nodeId="node-51">
+    <command xml:space="preserve">nothing</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-52"/>
+    </children>
+  </item>
+  <item nodeId="node-52">
+    <command xml:space="preserve">examine bear trap</command>
+    <result xml:space="preserve">In the bear trap is dog.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-53"/>
+    </children>
+  </item>
+  <item nodeId="node-53">
+    <command xml:space="preserve">open beartrap</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-54"/>
+    </children>
+  </item>
+  <item nodeId="node-54">
+    <command xml:space="preserve">open bear trap</command>
+    <result xml:space="preserve">It isn't something you can open.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-55"/>
+    </children>
+  </item>
+  <item nodeId="node-55">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Porch&#x000A;Descri&#x00E7;&#x00E3;o Porch.&#x000A;&#x000A;You can see Main door, Main key, Wooden chair, Old box (in which are candle and string), bucket (empty) and a bear trap (in which is dog) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-56"/>
+    </children>
+  </item>
+  <item nodeId="node-56">
+    <command xml:space="preserve">open bear trap</command>
+    <result xml:space="preserve">It isn't something you can open.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-57"/>
+    </children>
+  </item>
+  <item nodeId="node-57">
+    <command xml:space="preserve">unlock bear trap</command>
+    <result xml:space="preserve">What do you want to unlock the bear trap with?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-58"/>
+    </children>
+  </item>
+  <item nodeId="node-58">
+    <command xml:space="preserve">main key</command>
+    <result xml:space="preserve">(first taking Main key)&#x000A;A chill runs up your spine&#x000A;That doesn't seem to be something you can unlock.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-59"/>
+    </children>
+  </item>
+  <item nodeId="node-59">
+    <command xml:space="preserve">help dog</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-60"/>
+    </children>
+  </item>
+  <item nodeId="node-60">
+    <command xml:space="preserve">take dog</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
