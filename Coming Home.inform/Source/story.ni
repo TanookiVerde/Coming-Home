@@ -43,10 +43,10 @@ Porch is a room.
 Hall is a room. 
 Living Room is a room. 
 Garage is a room. 
-Kitchen is a room. "The lavabo needs to be cleaned."
+Kitchen is a room. "Texto antes da Kitchen."
 Dining Room is a room. 
 Home Office is a room. 
-Lavabo is a room.  "The lavabo needs to be cleaned."
+Lavabo is a room.  "Texto antes do Lavabo."
 Stairs is a staircase. It is above Hall and below Upper Hall. 
 Upper Hall is a room.  
 Large Bedroom is a room. 
@@ -121,7 +121,21 @@ After taking family photograph, say "Hey, Vsauce."
 
 Section 3.3 On the Living Room
 
-Section 3.4 On the Dinner Room
+Section 3.4 On the Dining Room
+
+Large Wooden Table is in Dining Room.
+Large Wooden Table is supporter.
+
+fresh apple is on Large Wooden Table.
+
+Old Chair is a chair. Old chair is in Dining Room.
+
+Shelf is in Dining Room. 
+Shelf is supporter.
+
+strange photograph is a thing.
+strange photograph is on Shelf.
+After taking strange photograph, say "Hey, Vsauce 2."
 
 Section 3.5 On the Kitchen
 
