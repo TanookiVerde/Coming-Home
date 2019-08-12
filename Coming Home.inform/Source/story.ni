@@ -2,6 +2,8 @@
 
 Chapter 1 New Kinds
 
+Saved is a number which varies. Saved is 0.
+
 Section 1.1 The Staircase
 
 A staircase is a kind of door. A staircase is usually open. A staircase is seldom openable. [A staircase is scenery.]
@@ -34,11 +36,6 @@ Carry out sitting on a chair:
 
 Report sitting on a chair:
 	say "You feel confortable".
-
-Section 1.3 Trap
-
-A trap is a kind of container. A trap can be open and closed. A trap is seldom openable.
-Instead of taking trap, say "You should try open the trap."
 
 Chapter 2 Geography
 
@@ -115,9 +112,10 @@ candle, string are in Old box.
 
 bucket is in Porch.
 
-A bear trap is a trap. It is in the Porch. 
+A bear trap is a container. It is in the Porch. 
 dog is in the bear trap.
-After opening bear trap, say "Au, Au, Au."
+After taking the dog:
+	now Saved is 1. "You saved the dog from the trap."
 
 Section 3.2 On the Hall
 
@@ -126,7 +124,7 @@ Wooden Table is supporter.
 
 family photograph is a thing.
 family photograph is on Wooden Table.
-After taking family photograph, say "Hey, Vsauce."
+After taking family photograph, say "Você olha mais de perto. Uma casal de pais com dois filhos, um menino e uma menina. No fundo uma casa em construção."
 
 Section 3.3 On the Living Room
 
@@ -157,7 +155,7 @@ old pressure cooker is on Furnace.
 Simple Table is in Kitchen.
 Simple Table is supporter.
 
-Orange Key is on Simple Table. "Hey, Hey, Hey."
+Orange Key is on Simple Table. "Você acredita que esta chave deve abrir a porta laranja, que leva para a garagem da casa. "
 
 dirty napkin is on Simple Table.
 
@@ -271,6 +269,34 @@ When play begins:
 
 Section 4.1 Homeless Asks For Help
 	
-Homeless Asks For Help is a scene. "Alguém está gritando pedindo ajuda."
-Homeless Asks For Help begins when the Player is in the Living Room for the first turn.	
+Homeless Asks For Help is a scene.
+Homeless Asks For Help begins when the Player is in the Living Room for the first time.
+
+When Homeless Asks For Help begins:
+	say "Assim que você entra no cômodo você ouve gritos de socorro vindo da esquerda, da porta marrom. [line break]";
+	say "Um homem grita por ajuda dizendo que caiu pelo basculhante e não consegue mais sair.";
+
+Section 4.2 Homeless Receives Help
+
+Homeless Receives Help is a scene. 
+Homeless Receives Help begins when the Player is in the Garage for the first time.
+
+When Homeless Receives Help begins:
+	say "'Ah! Finalmente você chegou... Tome isto como recompensa.' diz o homem.";
+	now Player carries Gray key;
+
+Section 4.3 Used Ruby on Statue
+
+Section 4.4 Ending
+
+Ending is a scene. 
+Ending begins when the Player is in the Medium Bedroom for the first time.
+
+When Ending begins:
+	say "The End.";
+	if Saved is 1:
+		say "Good End. Cachorro ajuda.";
+	otherwise:
+		say "Bad End. Morreu.";
+	
 	
