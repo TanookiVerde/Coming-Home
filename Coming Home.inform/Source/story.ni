@@ -8,7 +8,7 @@ A staircase is a kind of door. A staircase is usually open. A staircase is seldo
 Instead of climbing a staircase: 
     try entering the noun. 
 
-Section 2.1 Chairs
+Section 1.2 Chairs
 
 A chair is a kind of supporter that is enterable with carrying capacity 1. 
 
@@ -77,6 +77,17 @@ The matching key of the White door is the White key.
 Gray door is a door. it is west of Lavabo and east of Hall. Gray door is closed and locked.
 The matching key of the Gray door is the Gray key.
 
+Blue door is a door. It is east of Large Bedroom and west of Inner Bathroom. Blue door is open.
+
+Black door is a door. It is south of Large Bedroom and north of Upper Hall. Black door is closed and unlocked.
+
+Scratched door is a door. It is west of Upper Hall and east of Small Bedroom. Scratched door is closed and unlocked.
+
+Purple door is a door. It is north of Bathroom and south of Upper Hall. Purple door is closed and unlocked.
+
+Heart-painted door is a door. It is west of Medium Bedroom and east of Upper Hall. Heart-painted door is closed and locked.
+The matching key of the Heart-painted door is the Heartshaped key.
+
 Section 2.3 Regions
 
 First Floor is a region. The Hall, Living Room, Garage, Kitchen, Dining Room, Home Office and Lavabo are in First Floor.
@@ -85,9 +96,10 @@ Second Floor is a region. The Upper Hall, The Large Bedroom, the medium bedroom,
 Chapter 3 Things
 
 Player is in Porch.  
-Main key is in Porch.
 
 Section 3.1 On the Porch
+
+Main key is in Porch.
 
 Wooden chair is a chair. Wooden chair is in Porch.
 
