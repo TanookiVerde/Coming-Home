@@ -52,12 +52,12 @@ Interacting  is an action applying to one thing.
 Carry out interacting:
 	if player carries ruby stone:
 		if the noun is Stone Statue:
-			say "You put the ruby stone in the eye of the statue.  Nothing happens so you turn around and go on with your job... [line break]";
-			say "But them you hear from behind stones breaking. When you look around you can see the Stone Statue coming alive, with it's red-ruby eyes glowing like you never saw before. The monster begins to walk in your direction. You are mesmerized and can't move a muscle. The statue grabs you neck with both hands and starts to hang you. ";
+			say "You put the ruby stone in the eye of the statue.  You stare the statue for a few seconds, but not happened. So you decide to continue your job [line break]";
+			say "But when you turn your back to the statue, you hear from behind a sound of stones breaking. When you look back to the Stone Statue you can see that it is coming alive, with it's red-ruby eyes glowing like you never saw before. The statue begins to walk in your direction. You are mesmerized and can't move a muscle. The statue grabs you with one hand making it impossible to run away";
 			if Saved is 1:
-				say "You can see the dog you saved getting upstairs and trying to help you, but the statue is too strong.";
+				say "You can see the dog you saved getting upstairs and trying to help you, but the statue is too strong. With the other hand it crushes the dog in one hit. The dog is now dead. You give a final look to him, before turning your attention to the arm of the statue going up and them down in your direction. And then everything goes dark...";
 			otherwise:
-				say "You hear the dog in the porch barking. And then everything goes dark...";
+				say "You hear the dog in the porch barking. You see the other hand of the statue going up and them down in your direction. And then everything goes dark...";
 			say "[line break] REALLY BAD ENDING";
 			end the story;
 	otherwise:
@@ -71,11 +71,12 @@ Porch is a room. "The entrance shows the house’s condition. Old and abandoned.
 Hall is a room. "The room is dark and difficult to see without light." 
 Living Room is a room. "This room is oddly empty, like a hurricane has passed by removing all the furniture. Only 4 doors can be seen." 
 Garage is a room. "The garage is fully of rotten boxes. A weak light beam comes from a small window. The smell is bad, but is a relief compared to the kitchen." 
-Kitchen is a room. "It seems to be a normal kitchen, but not used for a lonf time. There are rotten food in the cabinet and a few dead rats on the floor. The smell is intolerable. You feel seasick only by staying in this room."
+Kitchen is a room. "It seems to be a normal kitchen, but not used for a long time. There are rotten food in the cabinet and a few dead rats on the floor. The smell is intolerable. You feel seasick only by staying in this room."
 Dining Room is a room.  "The dining room looks like to be more conserved than the other rooms. The forniture is fancy, but very strange."
 Home Office is a room.   "This room looks like a professional office. A desk with papers can be seen and behind it, there is a safe box on the corner."
 Lavabo is a room.  "There was a good reason the door was closed. The toilet is unusable. The smell is as bad as in the kitchen. A mirror hanging on the wall attracts  your attention."
-Stairs is a staircase. It is above Hall and below Upper Hall. "The stairs are... weird?"
+Stairs is a staircase. It is above Hall and below Upper Hall. 
+The description of a Stairs is "The stairs are... weird?".
 Upper Hall is a room.   "The decoration in this room is creepy. This room has stairs which gives access to the lower floor. And down the stairs, you see the Hall and the Main Door."
 Large Bedroom is a room.  "This bedroom is very large. The windows are covered by wood planks, but a hole on the ceiling allows the light to enter on the room. A beautiful painting is hanging on the wall."
 Medium Bedroom is a room.   "This room gives an impression that it is the core of the house, but you don't know why. Another corpse is in the bed, however there is no stink. The corpse seens prety different from the others."
@@ -117,12 +118,14 @@ Purple door is a door. It is north of Bathroom and south of Upper Hall. Purple d
 
 Heart-painted door is a door. It is west of Medium Bedroom and east of Upper Hall. Heart-painted door is closed and locked.
 The matching key of the Heart-painted door is the Heartshaped key.
+The description of Heart-painted door is "A beautifull door with a heart painted on it. This heart must means something."
+The description of Heartshaped key is "A beautiful key. The shape probably tells which door it opens";
 
 Instead of entering the stairs:
 	if Player is in Hall:
-		say "A escada vira um escorrega e você permanece no Hall.";
+		say "When you put your foot on the eighth step of the stairs, the whole stair transform itself in a ramp. You roll down the ramp and returns to the hall. You are hurt but fortunately you didn’t break anything. You hear a strange laugh coming from upstairs.";
 	otherwise:
-		say "A escada se comporta normalmente e você desce para o Hall";
+		say "Before going down the stairs you softly touch the first step. Everything seems right. The stair acts normally.";
 		continue the action;
 
 Section 2.3 Regions
@@ -235,7 +238,7 @@ Old Mirror is in Lavabo. It is fixed in place.
 The description of old mirror is "The mirror frame is made of gold. Well detailed. When look inside the mirror you see... another room?"
 
 After examining Old Mirror:
-	say "Teleporte, bichouuuuu.";
+	say "You put the finger inside the mirror. It disappears. You put your hole hand and it also disappears. You don’t think twice. You enter with all your body in the mirror. First you start to fell dizzy. Then things become worse. It is like your soul was taken off your body and travelled in an infinite speed. You see thousands of things and nothing at the same time. You cannot know if 5 seconds has passed or 5 days. It is the most painful sensation you have ever experienced. ";
 	now Player is in Inner Bathroom.
 
 Toilet is in Lavabo. It is fixed in place.
@@ -250,13 +253,14 @@ Section 3.8 On the Home Office
 
 Safe Box is in Home Office. It is fixed in place.
 Safe Box is container. It is locked.
+The matching key of the Safe box is the number sequence.
 The description of Safe Box is "A locked safe box. It looks like it holds something valuable. Maybe the code is hidden somewhere in the house".
 
 ruby stone is in Safe Box.
 The description of ruby stone is "A very bright ruby. Its color is a hot red that enchants every person who looks to it. Probably it is very precious."
 
-battery is in Safe Box.
-The description of battery is "It can be used to turn on eletrical equipments."
+[battery is in Safe Box.
+The description of battery is "It can be used to turn on eletrical equipments."]
 
 Writing Desk is in Home Office. It is fixed in place.
 Writing Desk is supporter.
@@ -283,7 +287,7 @@ Dirty Mirror is in Inner Bathroom. It is fixed in place.
 The description of Dirty Mirror is "Similar to the other mirrors on the house. You can see the Lavabo."
 
 After examining Dirty Mirror:
-	say "Teleporte, bichouuuuu.";
+	say "You put the finger inside the mirror. It disappears. You put your hole hand and it also disappears. You don’t think twice. You enter with all your body in the mirror. First you start to fell dizzy. Then things become worse. It is like your soul was taken off your body and travelled in an infinite speed. You see thousands of things and nothing at the same time. You cannot know if 5 seconds has passed or 5 days. It is the most painful sensation you have ever experienced. And still, you tried it again.";
 	now Player is in Lavabo.
 
 Marble Toilet is in Inner Bathroom. It is fixed in place.
@@ -318,7 +322,7 @@ The description of Small Bed is "It is all dirty of blood. There is a corpse on 
 
 Little Girl's Corpse is a thing.
 Little Girl's Corpse is on Small Bed. It is fixed in place.
-The description of Little Girl's Corpse is "A young girl is dead. It appears that she was sleeping before dye."
+The description of Little Girl's Corpse is "A young girl is dead. It appears that she was sleeping before die."
 
 Small Wardrobe is in Small Bedroom. It is fixed in place.
 Small Wardrome is container.
@@ -373,12 +377,16 @@ Ending is a scene.
 Ending begins when the Player is in the Medium Bedroom for the first time.
 
 When Ending begins:
-	say "The End.";
+	say "Entering in the last room of the house, you think nothing can surprise you any longer. You are wrong. You see the most bizarre scene you have ever seen. An old woman, with her skin as white as snow is laid on the bed. A dozen of tree branches are invading her body. Your first thought is that she is dead. But you see she trying to breathe, almost suffocating, while the branches are changing color as if they were taken energy from that old woman.[line break]
+	       Only after a few seconds you see another person standing in the room. The scene was so shocking that you didn’t notice him before. It is Charles. When you start to feel a little better for being a familiar face, he starts to talk. His voice is totally different now. He revels that he is no homeless. He always lived in that house, and the woman laid in the bed is his mother. You notice that his right hand is behind his back.[line break]
+               He tells you that the house needs to be feed. That ‘she’ needs a host. And her mother is no longer strong enough. He moves his right hand, and you can see that he is holding a piece of wood with nails. He runs towards you prepared to attack.[line break]";
 	if Saved is 1:
-		say "Good End. Dog Helps.";
+		say "Suddenly, the dog you helped before appears and protect you from the Charles' attack. He bites the man's arm and Charles screams of pain and fall on the floor. You profited his position to kick him in the face, knocking him out. The dog runs through the door, in direction of the exit and you follow him.[line break]
+                    You escaped from the most dangerous situation that you have ever lived or will live. Thanks to your kind soul, you helped a poor animal before entering the house. This dog never forgot you and in your greatest need, he was there to help you. Congratulations Carlos. You have visited all the rooms in the house and completed your job. But, most important, you now have a dog companion.";
 		say "[line break] GOOD ENDING. Congratulations!";
 	otherwise:
-		say "Bad End. Died.";
+		say "You defend yourself putting your write arm in front of your face. The man hits your arm with an unnatural strength and the nails trespasses your skin. You instantly move your arm. The piece of wood is wiped off Charles' hands and is now on the floor. The man is coming once again in your direction. You try to get to the piece of wood, but it is too late. His hands are already involving your neck. There is no point in trying to escape, he is way stronger than you. He raises you in the air and strangles you. Your vision is now blurry. You hear the dog in the porch barking. You still try to hit him in the chest a moment before you fainted.[line break]
+		When you woke up, you see you are in the same room where the fight took place. You try to move but your body does not answer your commands any longer. You look around and you are laid on the bed, with tree branches all over you body. You try to scream, but you have no voice. You are now part of the house.";
 		say "[line break] BAD ENDING.";
 	end the story.
 		

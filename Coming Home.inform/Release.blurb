@@ -1,21 +1,21 @@
 ! Blurb file created by Inform build 6M62
 
-status "C:\Program Files (x86)\Inform 7\Internal\Miscellany\CblorbModel.html" "C:\Users\pedro\Documents\GitHub\Coming-Home\Coming Home.inform\Build\StatusCblorb.html"
+status "C:\Program Files (x86)\Inform 7\Internal\Miscellany\CblorbModel.html" "C:\Users\ramir\Desktop\Ramiro\2 - Estudos\1 - UFRJ\7 - Doutorado\matérias\Projeto de Jogos\Trab 2\Coming-Home-master\Coming Home.inform\Build\StatusCblorb.html"
 
 
 ! Identification
 
-project folder "C:\Users\pedro\Documents\GitHub\Coming-Home\Coming Home.inform"
-release to "C:\Users\pedro\Documents\GitHub\Coming-Home\Coming Home.materials\Release"
+project folder "C:\Users\ramir\Desktop\Ramiro\2 - Estudos\1 - UFRJ\7 - Doutorado\matérias\Projeto de Jogos\Trab 2\Coming-Home-master\Coming Home.inform"
+release to "C:\Users\ramir\Desktop\Ramiro\2 - Estudos\1 - UFRJ\7 - Doutorado\matérias\Projeto de Jogos\Trab 2\Coming-Home-master\Coming Home.materials\Release"
 
 ! Blorb instructions
 
 storyfile leafname "Coming Home.gblorb"
-storyfile "C:\Users\pedro\Documents\GitHub\Coming-Home\Coming Home.inform\Build\output.ulx" include
-ifiction "C:\Users\pedro\Documents\GitHub\Coming-Home\Coming Home.inform\Metadata.iFiction" include
+storyfile "C:\Users\ramir\Desktop\Ramiro\2 - Estudos\1 - UFRJ\7 - Doutorado\matérias\Projeto de Jogos\Trab 2\Coming-Home-master\Coming Home.inform\Build\output.ulx" include
+ifiction "C:\Users\ramir\Desktop\Ramiro\2 - Estudos\1 - UFRJ\7 - Doutorado\matérias\Projeto de Jogos\Trab 2\Coming-Home-master\Coming Home.inform\Metadata.iFiction" include
 cover "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Cover.jpg"
 picture 1 "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Cover.jpg"
-picture 3 "C:\Users\pedro\Documents\GitHub\Coming-Home\Coming Home.materials\Figures\house.jpg"
+picture 3 "C:\Users\ramir\Desktop\Ramiro\2 - Estudos\1 - UFRJ\7 - Doutorado\matérias\Projeto de Jogos\Trab 2\Coming-Home-master\Coming Home.materials\Figures\house.jpg"
 
 ! Placeholder variables
 
