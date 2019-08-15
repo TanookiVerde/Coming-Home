@@ -199,6 +199,7 @@ Section 3.7 On the Lavabo
 
 Old Mirror is in Lavabo.
 The description of old mirror is "The mirror frame is made of gold. Well detailed. When look inside the mirror you see... another room?"
+
 After examining Old Mirror:
 	say "Teleporte, bichouuuuu.";
 	now Player is in Inner Bathroom.
@@ -244,7 +245,11 @@ Bathtub is in Inner Bathroom.
 The description of Bathtub is "There is a corpse in it."
 
 Dirty Mirror is in Inner Bathroom.
-The description of Dirty Mirror is "Similar to the other mirrors on the house. This one is broken."
+The description of Dirty Mirror is "Similar to the other mirrors on the house. You can see the Lavabo."
+
+After examining Dirty Mirror:
+	say "Teleporte, bichouuuuu.";
+	now Player is in Lavabo.
 
 Marble Toilet is in Inner Bathroom.
 

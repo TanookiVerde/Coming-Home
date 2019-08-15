@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-120"/>
+  <activeNode nodeId="node-124"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Coming Home</command>
     <result xml:space="preserve">A chilling wind blows in the late afternoon. You catch sight of the house that you have to evaluate. The house scares you and you try to gain some confidence: "Ok Carlos, it is just another house to evaluate. You've done this on hundreds houses before. Just get in, see all the rooms, and get out. Very simple.". Still, the fact that it is the only house in the street gives signs that something is wrong.&#x000A;&#x000A;Coming Home&#x000A;An Interactive Fiction by Cl&#x00F3;vis, Ramiro and Pedro&#x000A;Release 1 / Serial number 190814 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Porch&#x000A;The entrance shows the house's condition. Old and abandoned.&#x000A;&#x000A;You can see Main door, Main key, Wooden chair, Old box (in which are candle and string), bucket (empty) and a bear trap (in which is dog) here.&#x000A;&#x000A;&gt;</result>
@@ -497,7 +497,7 @@
     <command xml:space="preserve">take dog</command>
     <result xml:space="preserve">You should try to release the dog.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <children>
       <child nodeId="node-59"/>
       <child nodeId="node-61"/>
@@ -803,6 +803,42 @@
   <item nodeId="node-120">
     <command xml:space="preserve">release dog</command>
     <result xml:space="preserve">Go away dog!&#x000A;&#x000A;You saved the dog from the trap. He is very thankful.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-121"/>
+    </children>
+  </item>
+  <item nodeId="node-121">
+    <command xml:space="preserve">unlock main door</command>
+    <result xml:space="preserve">What do you want to unlock Main door with?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-122"/>
+    </children>
+  </item>
+  <item nodeId="node-122">
+    <command xml:space="preserve">main key</command>
+    <result xml:space="preserve">(first taking Main key)&#x000A;A chill runs up your spine&#x000A;You unlock Main door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-123"/>
+    </children>
+  </item>
+  <item nodeId="node-123">
+    <command xml:space="preserve">enter main door</command>
+    <result xml:space="preserve">(first opening Main door)&#x000A;&#x000A;Hall&#x000A;The room is dark and difficult to see without light.&#x000A;&#x000A;The stairs are... weird?&#x000A;&#x000A;You can also see Gray door, Main door, Red door and Wooden Table (on which is family photograph) here.&#x000A;&#x000A;The inside smells as bad news...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-124"/>
+    </children>
+  </item>
+  <item nodeId="node-124">
+    <command xml:space="preserve">examine wooden table</command>
+    <result xml:space="preserve">On Wooden Table is family photograph.&#x000A;&#x000A;Teleporte, bichouuuuu.&#x000A;&#x000A;Inner Bathroom&#x000A;The decoration on this room is very similar to the other rooms. The mirror hanging on the wall is identical to the mirror in the lavabo.&#x000A;&#x000A;You can see Blue door, Marble Wash Basin (on which is Soap), Bathtub, Dirty Mirror and Marble Toilet here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
