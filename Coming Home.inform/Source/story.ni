@@ -41,26 +41,27 @@ Chapter 2 Geography
 
 Section 2.1 Rooms
 
-Porch is a room. "Descrição Porch."
-Hall is a room. "Descrição Hall." 
-Living Room is a room. "Descrição Living Room." 
-Garage is a room. "Descrição Garage." 
-Kitchen is a room. "Descrição Kitchen."
-Dining Room is a room.  "Descrição Dining Room."
-Home Office is a room.   "Descrição Home Office."
-Lavabo is a room.  "Descrição Lavabo."
-Stairs is a staircase. It is above Hall and below Upper Hall. 
-Upper Hall is a room.   "Descrição Upper Hall."
-Large Bedroom is a room.  "Descrição Large Bedroom."
-Medium Bedroom is a room.   "Descrição Medium Bedroom."
-Small Bedroom is a room.  "Descrição Small Bedroom."
-Bathroom is a room.  "Descrição Bathroom."
-Inner Bathroom is a room.  "Descrição Inner Bathroom."
+Porch is a room. "The entrance shows the house’s condition. Old and abandoned."
+Hall is a room. "The room is dark and difficult to see without light." 
+Living Room is a room. "This room is oddly empty, like a hurricane has passed by removing all the furniture. Only 4 doors can be seen." 
+Garage is a room. "The garage is fully of rotten boxes. A weak light beam comes from a small window. The smell is bad, but is a relief compared to the kitchen." 
+Kitchen is a room. "It seems to be a normal kitchen, but not used for a lonf time. There are rotten food in the cabinet and a few dead rats on the floor. The smell is intolerable. You feel seasick only by staying in this room."
+Dining Room is a room.  "The dining room looks like to be more conserved than the other rooms. The forniture is fancy, but very strange."
+Home Office is a room.   "This room looks like a professional office. A desk with papers can be seen and behind it, there is a safe box on the corner."
+Lavabo is a room.  "There was a good reason the door was closed. The toilet is unusable. The smell is as bad as in the kitchen. A mirror hanging on the wall attracts  your attention."
+Stairs is a staircase. It is above Hall and below Upper Hall. "The stairs are... weird?"
+Upper Hall is a room.   "The decoration in this room is creepy. This room has stairs which gives access to the lower floor. And down the stairs, you see the Hall and the Main Door."
+Large Bedroom is a room.  "This bedroom is very large. The windows are covered by wood planks, but a hole on the ceiling allows the light to enter on the room. A beautiful painting is hanging on the wall."
+Medium Bedroom is a room.   "This room gives an impression that it is the core of the house, but you don't know why. Another corpse is in the bed, however there is no stink. The corpse seens prety different from the others."
+Small Bedroom is a room.  "The stink is the first thing noted in this room. The second is the source of the stink. A corpse is laid down on the bed. The small dimension of this room and the corpse on the bed give you a claustrophobia's sensation."
+Bathroom is a room.  "A bathroom very similar to the last one. There is a corpse on the bathtub emitting a bad smell. A mirror is hanging on the wall and it is broken."
+Inner Bathroom is a room.  "The decoration on this room is very similar to the other rooms. The mirror hanging on the wall is identical to the mirror in the lavabo."
 
 Section 2.2 Doors
 
 Main door is a door. It is north of Porch and south of Hall. Main door is closed and locked.
 The matching key of the Main door is Main key.
+The description of a Main door is "A huge and heavy door. It looks likes to be the only properly way to enter on the house."
 
 Red door is a door. It is north of Hall and south of Living Room. Red door is closed and unlocked.
 
@@ -75,6 +76,7 @@ Brown door is a door. it is west of Living Room and east of Garage. Brown door i
 
 White door is a door. it is west of Home Office and east of Living Room. White door is closed and locked.
 The matching key of the White door is the White key.
+The description of White door is "This door is more elegant than the others. Perhaps it hides something valuable."
 
 Gray door is a door. it is west of Lavabo and east of Hall. Gray door is closed and locked.
 The matching key of the Gray door is the Gray key.
@@ -102,6 +104,7 @@ Player is in Porch.
 Section 3.1 On the Porch
 
 Main key is in Porch.
+The description of a Main key is "An old and robust key. It seems like it is not used for more than 10 years. Probably opens the Main Door."
 
 Wooden chair is a chair. Wooden chair is in Porch.
 
@@ -109,13 +112,16 @@ Old box is a container. Old box is in Porch.
 
 candle is a thing. string is a thing. bucket is a container.
 candle, string are in Old box.
+The description of a candle is "A used candle. Perhaps it can still illuminate a dark room."
 
 bucket is in Porch.
 
 A bear trap is a container. It is in the Porch. 
-dog is in the bear trap.
+dog is in the bear trap. 
+The description of a dog is "A hazed dog. His leg seems pretty hurt."
 After taking the dog:
-	now Saved is 1. "You saved the dog from the trap."
+	now Saved is 1;
+	say "You saved the dog from the trap. He is very thankful."
 
 Section 3.2 On the Hall
 
@@ -124,11 +130,10 @@ Wooden Table is supporter.
 
 family photograph is a thing.
 family photograph is on Wooden Table.
-After taking family photograph, say "Você olha mais de perto. Uma casal de pais com dois filhos, um menino e uma menina. No fundo uma casa em construção."
+The description of family photograph is "Giving a closer look on the photo you see two kids, a boy and a girl, with their parents. Behind them, there is a house being constructed."
+After taking family photograph, say "I should examine it.".
 
 Section 3.3 On the Living Room
-
-
 
 Section 3.4 On the Dining Room
 
@@ -136,15 +141,18 @@ Large Wooden Table is in Dining Room.
 Large Wooden Table is supporter.
 
 fresh apple is on Large Wooden Table.
+The description of fresh apple is "A normal, red and fresh apple."
 
 Old Chair is a chair. Old chair is in Dining Room.
+The description of Old Chair is "A fancy chair. But a closer look to the chair foot shows that the chair is physically linked to the floor. Like if it had roots."
 
 Shelf is in Dining Room. 
 Shelf is supporter.
 
 strange photograph is a thing.
 strange photograph is on Shelf.
-After taking strange photograph, say "Hey, Vsauce 2."
+The description of strange photograph is "There is a old woman writing or drawing something behind a painting."
+After taking strange photograph, say "".
 
 Section 3.5 On the Kitchen
 
@@ -157,9 +165,11 @@ old pressure cooker is on Furnace.
 Simple Table is in Kitchen.
 Simple Table is supporter.
 
-Orange Key is on Simple Table. "Você acredita que esta chave deve abrir a porta laranja, que leva para a garagem da casa. "
+Orange Key is on Simple Table. 
+The description of Orange Key is "It is pretty clear that it opens the orange door."
 
 dirty napkin is on Simple Table.
+The description of dirty napkin is "A napkin with all sort of stains. Food, juice... blood."
 
 Cabinet is in Kitchen.
 Cabinet is container.
@@ -177,10 +187,13 @@ The homeless is a man. It is in the Garage.
 Section 3.7 On the Lavabo
 
 Old Mirror is in Lavabo.
+The description of old mirror is "The mirror frame is made of gold. Well detailed. When look inside the mirror you see... another room?"
 
 Toilet is in Lavabo.
+The description of Toilet is "Impossible to use."
 
-dirty towel is in Lavabo.
+dirty towel is in Lavabo. 
+The description of dirty towel is "All dirty of blood."
 
 Wash Basin is in Lavabo.
 
@@ -188,19 +201,25 @@ Section 3.8 On the Home Office
 
 Safe Box is in Home Office.
 Safe Box is container. It is locked.
+The description of Safe Box is "A locked safe box. It looks like it holds something valuable. Maybe the code is hidden somewhere in the house".
 
 ruby stone is in Safe Box.
+The description of ruby stone is "A very bright ruby. Its color is a hot red that enchants every person who looks to it. Probably it is very precious."
 
 battery is in Safe Box.
+The description of battery is "It can be used to turn on eletrical equipments."
 
 Writing Desk is in Home Office.
 Writing Desk is supporter.
+The description of Writing Desk is "Full of papers."
 
 mysterious photograph is on Writing Desk.
+The description of mysterious photograph is "The photo shows two kids hugging themselves and smiling to the camera. Behind them you can see the house. And if you look closer, you can see a strange figure with 2 glowing red eyes looking to the kids."
 
 Section 3.9 On the Upper Hall
 
 Stone Statue is in Upper Hall.
+The description of Stone Statue is "A scaring statue holding still, like if it is almost moving. You can deduce that it has two ruby eyes. One is in the statue, the other one is missing."
 
 Section 3.10 On the Inner Bathroom
 
@@ -208,14 +227,17 @@ Marble Wash Basin is in Inner Bathroom. It is supporter.
 Soap is on Marble Wash Basin.
 
 Bathtub is in Inner Bathroom.
+The description of Bathtub is "There is a corpse in it."
 
 Dirty Mirror is in Inner Bathroom.
+The description of Dirty Mirror is "Similar to the other mirrors on the house. This one is broken."
 
 Marble Toilet is in Inner Bathroom.
 
 Section 3.11 On the Large Bedroom
 
 Beautiful Painting is in Large Bedroom.
+The description of Beautiful Painting is "A beautifull painting decoring the wall. You have a feel that you have already seen this painting somewhere."
 
 Large Bed is in Large Bedroom.
 
@@ -231,9 +253,11 @@ Section 3.13 On the Small Bedroom
 
 Small Bed is in Small Bedroom.
 Small Bed is supporter.
+The description of Small Bed is "It is all dirty of blood. There is a corpse on it."
 
 Little Girl's Corpse is a thing.
 Little Girl's Corpse is on Small Bed. [Isso tem que ser fixo]
+The description of Little Girl's Corpse is "A young girl is dead. It appears that she was sleeping before dye."
 
 Small Wardrobe is in Small Bedroom.
 Small Wardrome is container.
@@ -243,13 +267,16 @@ pink dress is on Small Wardrobe.
 Section 3.14 On the Bathroom
 
 Stained Bathtub is in Bathroom.
+The description of Stained Bathtub is "The bathtub is full of a dense dark water. There is a corpse in it."
 
 Old Man's Corpse is a thing.
 Old Man's Corpse is on Stained Bathtub.
+The description of Old Man's Corpse is "This man died a long ago. There is something on his chest."
 
 Wrinkled Clothes is in Bathroom.
 
 White Key is in Wrinkled Clothes.
+The description of White Key is "It is pretty clear that it opens the orange door."
 
 Chapter 4 What Happens when entering
 
@@ -267,24 +294,24 @@ Figure of InitialPicture is the file "house.jpg"
 	
 When play begins:
 	Display the Figure of InitialPicture ;
-	Say "A chilling wind blows in the late afternoon".
+	Say "A chilling wind blows in the late afternoon. You catch sight of the house that you have to evaluate. The house scares you and you try to gain some confidence: 'Ok Carlos, it is just another house to evaluate. You've done this on hundreds houses before. Just get in, see all the rooms, and get out. Very simple.'. Still, the fact that it is the only house in the street gives signs that something is wrong.".
 
 Section 4.1 Homeless Asks For Help
 	
 Homeless Asks For Help is a scene.
 Homeless Asks For Help begins when the Player is in the Living Room for the first time.
 
-[ When Homeless Asks For Help begins:
-	say "Assim que você entra no cômodo você ouve gritos de socorro vindo da esquerda, da porta marrom. [line break]";
-	say "Um homem grita por ajuda dizendo que caiu pelo basculhante e não consegue mais sair."; ]
-	
+[When Homeless Asks For Help begins:
+	say "In the moment you enter in the room, you hear someone on your left screaming for help, coming from the brown door. [line break]";
+	say "A men screams for help saying that he entered by the window and felt, now he can't leave anymore."; ]
+
 Section 4.2 Homeless Receives Help
 
 Homeless Receives Help is a scene. 
 Homeless Receives Help begins when the Player is in the Garage for the first time.
 
 When Homeless Receives Help begins:
-	say "'Ah! Finalmente você chegou... Tome isto como recompensa.' diz o homem.";
+	say "'Ah! Finally you arrived.... Take this as reward,' said the homeless.";
 	now Player carries Gray key;
 
 Section 4.3 Used Ruby on Statue
@@ -297,10 +324,10 @@ Ending begins when the Player is in the Medium Bedroom for the first time.
 When Ending begins:
 	say "The End.";
 	if Saved is 1:
-		say "Good End. Cachorro ajuda.";
+		say "Good End. Dog Helps.";
 	otherwise:
-		say "Bad End. Morreu.";
-	
+		say "Bad End. Died.";
+		
 Chapter 5 - NPCs
 
 Section 5.1 - Homeless
