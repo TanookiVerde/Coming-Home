@@ -8,14 +8,14 @@ Section 1.1 The Staircase
 
 A staircase is a kind of door. A staircase is usually open. A staircase is seldom openable. [A staircase is scenery.]
 Instead of climbing a staircase: 
-    try entering the noun. 
+	try entering the noun. 
 
 Section 1.2 Chairs
 
 A chair is a kind of supporter that is enterable with carrying capacity 1. 
 
 [Instead of entering a chair:
-    try sitting the noun.]
+	try sitting the noun.]
 
 Definition: A chair is occupied if something is on it.
 
@@ -128,6 +128,8 @@ After taking family photograph, say "Você olha mais de perto. Uma casal de pais
 
 Section 3.3 On the Living Room
 
+
+
 Section 3.4 On the Dining Room
 
 Large Wooden Table is in Dining Room.
@@ -170,7 +172,7 @@ deflated ball is in Garage.
 wooden planks is a thing.
 wooden planks is in Garage. 
 
-A homeless is a man. It is in the Garage.
+The homeless is a man. It is in the Garage.
 
 Section 3.7 On the Lavabo
 
@@ -272,10 +274,10 @@ Section 4.1 Homeless Asks For Help
 Homeless Asks For Help is a scene.
 Homeless Asks For Help begins when the Player is in the Living Room for the first time.
 
-When Homeless Asks For Help begins:
+[ When Homeless Asks For Help begins:
 	say "Assim que você entra no cômodo você ouve gritos de socorro vindo da esquerda, da porta marrom. [line break]";
-	say "Um homem grita por ajuda dizendo que caiu pelo basculhante e não consegue mais sair.";
-
+	say "Um homem grita por ajuda dizendo que caiu pelo basculhante e não consegue mais sair."; ]
+	
 Section 4.2 Homeless Receives Help
 
 Homeless Receives Help is a scene. 
@@ -299,4 +301,246 @@ When Ending begins:
 	otherwise:
 		say "Bad End. Morreu.";
 	
+Chapter 5 - NPCs
+
+Section 5.1 - Homeless
+
+[ Annoying Behaviour statement ]
+After player entering Red Door:
+	First strange noise happens in 1 turns from now;
+	Second strange noise happens in 3 turns from now.
+
+Noise-Heard is a truth state which varies. Noise-Heard is false.
+Second-Noise-Heard is a truth state which varies. Second-Noise-Heard is false.
+
+At the time when first strange noise happens:
+	Say "You hear something knocking the wall out there.";
+	Now Noise-Heard is true.
+
+At the time when second strange noise happens:
+	Say "You really heard someone shouting in the next room.[line break]You can respond this supplicant or simply ignore it!";
+	Now Second-Noise-Heard is true.
+
+Every turn when Noise-Heard is true and Second-Noise-Heard is true and homeless is not proper-named:
+	Say "The unidentified noise is still coming from the Garage."
+
+[ Homeless structure ]
+Feature is a kind of value. The features are grimy, smelly, ragged, hurt.
+
+Appearance relates various persons to various features. The verb to appear means the appearance relation.
+
+The homeless appears grimy and smelly and ragged and hurt.
+The homeless is either anonymous or introduced or waiting_help or helped. The homeless is anonymous.
+
+Instead of examining the homeless for the first time: 
+	now the printed name of the homeless is "Charles";
+	now the homeless is proper-named;
+	say "The homeless introduced himself to you and his name is Charles.[line break]Maybe he has something to tell you..."
+
+Understand "Charles" as the homeless when the homeless is proper-named.
+
+Understand "supplicant" as the homeless.
+
+[ Making homeless accessible out of its room ]
+After deciding the scope of the player: 
+	place the homeless in scope.
+
+[ Autonomous behaviour of homeless as a supplicant ]
+Understand "respond [something]" as responding.
+Responding is an action applying to one visible thing.
+Check responding:	
+	if the noun is not a person, say "Talking to objects? You're maybe mad" instead;
+	if the player is not in the Living Room, say "Nobody can hear you, stop talking to yourself!" instead.
+Carry out responding:
+	try actor examining the Noun.
 	
+[ CONVERSATION ]
+[ Make players conversable ]
+A person is either idle or conversing. The player is idle.
+A person has a table-name called conversation. 
+Current conversation table is a table-name that varies. 
+Current conversation table is Table of Charles's  Chatter.
+Interlocutor is a person that varies.
+
+[ Define conversation ]
+The conversation of the homeless is the Table of Charles's Chatter.
+
+[ Define actions to conversation ]
+Talking to is an action applying to one visible thing.
+Understand "talk to [someone]" or "converse with [someone]" as talking to.
+
+Carry out talking to:
+	now the player is conversing;
+	now interlocutor is the noun;
+	if the noun is anonymous:
+		now current conversation table is the conversation of the noun;
+	backup chat table;
+	reorder labels;
+	display chat.
+
+[ Define action to select phrases ]
+Understand "[number]" as selecting.
+Selecting is an action applying to one number.
+
+Instead of selecting a row_label listed in the current conversation table:
+	if the player is idle, say "You're not talking to anyone." instead;
+	choose row with a row_label of number understood in the current conversation table;
+	let end_chat be end_chat_flag entry;
+	say "[option entry][line break]";
+	if there is a reply entry, say "[line break][reply entry]";
+	if there is a blank_flag entry:
+		choose row number understood + 2 in the Table of Conversation Status;
+		blank out the whole row;
+		choose row with a row_label of number understood in the current conversation table;
+		blank out the whole row;
+	reorder labels;
+	say "[line break]";
+	if end_chat is 1:
+		end the conversation;
+		say "[line break][line break]You are alone again, no more conversations.";
+	otherwise:
+		display chat.
+	
+
+[ Preserve conversation tables ]
+To backup chat table:
+	repeat with n running from 1 to number of rows in the current conversation table:
+		choose a blank row in Table of Backup Chatter;
+		if there is an option in row n of the current conversation table:
+			now option entry is option in row n of the current conversation table;
+		if there is a reply in row n of the current conversation table:
+			now reply entry is reply in row n of the current conversation table;
+		if there is a row_label in row n of the current conversation table:
+			now row_label entry is row_label in row n of the current conversation table;
+		if there is a blank_flag in row n of the current conversation table:
+			now blank_flag entry is blank_flag in row n of the current conversation table;
+		if there is a end_chat_flag in row n of the current conversation table:
+			now end_chat_flag entry is end_chat_flag in row n of the current conversation table;
+		if there is a last_flag in row n of the current conversation table:
+			now last_flag entry is last_flag in row n of the current conversation table.
+
+To restore chat table:
+	repeat through current conversation table:
+		blank out the whole row;
+	repeat with n running from 1 to number of rows in the Table of Backup Chatter:
+		if there is an option in row n of the Table of Backup Chatter:
+			choose a blank row in current conversation table;
+			if there is an option in row n of the Table of Backup Chatter:
+				now option entry is option in row n of the Table of Backup Chatter;
+			if there is a reply in row n of the Table of Backup Chatter:
+				now reply entry is reply in row n of the Table of Backup Chatter;
+			if there is a row_label in row n of the Table of Backup Chatter:
+				now row_label entry is row_label in row n of the Table of Backup Chatter;
+			if there is a blank_flag in row n of the Table of Backup Chatter:
+				now blank_flag entry is blank_flag in row n of the Table of Backup Chatter;
+			if there is an end_chat_flag in row n of the Table of Backup Chatter:
+				now end_chat_flag entry is end_chat_flag in row n of the Table of Backup Chatter;
+			if there is a last_flag in row n of the Table of Backup Chatter:
+				now last_flag entry is last_flag in row n of the Table of Backup Chatter;
+	repeat through Table of Backup Chatter:
+		blank out the whole row;
+	repeat through Table of Conversation Status:
+		blank out the whole row.
+
+[ Conversation algoritmn rules ]		
+To display chat:
+	let index be 0;
+	repeat through current conversation table:
+		now index is index + 1;
+		now row_label entry is index;
+		reorder labels;
+		say "[option entry][line break]";
+		let chat be option entry;
+		choose row index + 2 in the Table of Conversation Status;
+		now left entry is chat;
+		now central entry is "";
+		now right entry is "";
+		choose row index in the current conversation table.
+	
+To end the conversation:
+	restore chat table;
+	Now the player is idle;
+	if homeless is anonymous:
+		now homeless is introduced;
+		now current conversation table is Table of Could Help Me;
+		say "Could you help me? I have a god to you!";
+		try talking to homeless.
+		
+	
+To reorder labels:
+	let index be 0;	
+	[say "[current conversation table]";]
+	repeat through current conversation table 
+	begin;
+		if there is a row_label entry
+		begin;
+			now index is index + 1;
+			now row_label entry is index;
+		end if;
+	end repeat.
+	
+[ Rule for constructing the status line when the player is conversing:
+	say "reconstructing status line";
+	fill status bar conversationally with the current conversation table.
+
+To fill status bar conversationally with (selected table - a table-name):
+	let __n be the number of rows in the selected table + 2;
+	say __n;
+	[deepen the status line to __n rows;]
+	let __index be 1;
+	[ move the cursor to __index; ]
+	say "Talking to: [interlocutor] in [location]";
+	now __index is 3;
+	repeat through selected table 
+	begin;
+		[ move the cursor to __index; ]
+		if there is an option entry 
+		begin;
+			say "[option entry]";
+			now __index is __index + 1;
+		end if;
+	end repeat. ]
+
+Carry out selecting:
+	say "No such option is available."
+
+Table of Status
+left	central	right
+" No conversation"	"[location]"	""
+
+Table of Conversation Status
+left	central	right
+" Talking to: [interlocutor]"	"[location]"	""
+""	""	""
+with 5 blank rows
+
+Table of Charles's Chatter
+option	reply	row_label	blank_flag	end_chat_flag	last_flag
+"[row_label in row 1 of current conversation table]: 'Who are you?'"	"'As I said, my name is Charles. I am a homeless.' he replies."	0	1	-1	"a"
+"[row_label in row 2 of current conversation table]: 'Where are you'"	"'I am locked in the Garage room.' he replies."	0	1	-1	"b"
+"[row_label in row 3 of current conversation table]: 'Why are you there?'"	"'I was looking for some gods in this abandoned house and I got locked here after falling through the tipper "	0	1	1	"c"
+
+Table of Backup Chatter 
+option	reply	row_label	blank_flag	end_chat_flag	last_flag
+a text	a text	a number	a number	a number	a text
+with 20 blank rows
+
+Table of Could Help Me
+option	reply	row_label	blank_flag	end_chat_flag	last_flag
+"[row_label in row 1 of current conversation table]: 'Yes'"	"'Fine, follow my instructions.' he replies."	0	1	1	"b"
+"[row_label in row 1 of current conversation table]: 'No'"	"'Okay, if you change your mind, ask me again.' he replies."	0	1	1	"b"
+
+Chapter 6 - Cheating
+
+Understand "move to Living Room" as movingLR.
+
+MovingLR is an action applying to nothing
+
+Carry out movingLR:
+		try silently taking main key;
+		now main door is unlocked;
+		try silently entering main door;
+		try silently entering red door.
+		
+Report movingLR:
+	say "Now you are in the Living Room".
