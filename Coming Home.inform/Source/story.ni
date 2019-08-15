@@ -36,6 +36,14 @@ Carry out sitting on a chair:
 
 Report sitting on a chair:
 	say "You feel confortable".
+	
+Section 1.3 Release
+
+Understand "release [something]" as releasing.
+Releasing  is an action applying to one thing.
+Carry out releasing:
+	Say "Go away [the noun]![line break]";
+	Now dog is in the Porch.
 
 Chapter 2 Geography
 
@@ -119,7 +127,10 @@ bucket is in Porch.
 A bear trap is a container. It is in the Porch. 
 dog is in the bear trap. 
 The description of a dog is "A hazed dog. His leg seems pretty hurt."
-After taking the dog:
+
+Instead of taking the dog, say "You should try to release the dog."
+
+After releasing the dog:
 	now Saved is 1;
 	say "You saved the dog from the trap. He is very thankful."
 
@@ -188,6 +199,9 @@ Section 3.7 On the Lavabo
 
 Old Mirror is in Lavabo.
 The description of old mirror is "The mirror frame is made of gold. Well detailed. When look inside the mirror you see... another room?"
+After examining Old Mirror:
+	say "Teleporte, bichouuuuu.";
+	now Player is in Inner Bathroom.
 
 Toilet is in Lavabo.
 The description of Toilet is "Impossible to use."
