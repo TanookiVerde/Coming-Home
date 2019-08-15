@@ -411,7 +411,8 @@ Feature is a kind of value. The features are grimy, smelly, ragged, hurt.
 Appearance relates various persons to various features. The verb to appear means the appearance relation.
 
 The homeless appears grimy and smelly and ragged and hurt.
-The homeless is either anonymous or introduced or waiting_help or helped. The homeless is anonymous.
+The homeless carries an Gray key.
+The homeless is either anonymous or introduced or waiting_help or helped or forgiven. The homeless is anonymous.
 
 Instead of examining the homeless for the first time: 
 	now the printed name of the homeless is "Charles";
@@ -438,11 +439,25 @@ Carry out responding:
 [ CONVERSATION ]
 [ Make players conversable ]
 A person is either idle or conversing. The player is idle.
+A person is either helper or not_helpful. The player is not_helpful.
 A person has a table-name called conversation. 
 Current conversation table is a table-name that varies. 
 Current conversation table is Table of Charles's  Chatter.
 Interlocutor is a person that varies.
 
+[ Define behaviors to player find homeless ]
+After going to the Garage:
+	if homeless is waiting_help:
+		say "As you enter the room, immediately you found the homeless.[line break]He is hurt.[line break]Tell something to him.";
+		try talking to homeless;
+	otherwise if homeless is helped:
+		if the player carries a ruby stone:
+			say "We have a deal and I'm here to give to you something.[line break]";
+			try talking to homeless;
+		otherwise:
+			say "The homeless looked to you and said: 'You have nothing to me, go away!'".
+
+	
 [ Define conversation ]
 The conversation of the homeless is the Table of Charles's Chatter.
 
@@ -450,6 +465,8 @@ The conversation of the homeless is the Table of Charles's Chatter.
 Talking to is an action applying to one visible thing.
 Understand "talk to [someone]" or "converse with [someone]" as talking to.
 
+Check talking to:
+	if homeless is waiting_help and player is not  in the Garage, say "I'm waiting for you, for now that's enough. [line break]Run, help me, find a way to Garage Room!!" instead.
 Carry out talking to:
 	now the player is conversing;
 	now interlocutor is the noun;
@@ -457,6 +474,8 @@ Carry out talking to:
 		now current conversation table is the conversation of the noun;
 	backup chat table;
 	reorder labels;
+	if homeless is introduced:
+		say "Could you help me? I have a god to you![line break]";
 	display chat.
 
 [ Define action to select phrases ]
@@ -467,6 +486,7 @@ Instead of selecting a row_label listed in the current conversation table:
 	if the player is idle, say "You're not talking to anyone." instead;
 	choose row with a row_label of number understood in the current conversation table;
 	let end_chat be end_chat_flag entry;
+	let label be row_label entry;
 	say "[option entry][line break]";
 	if there is a reply entry, say "[line break][reply entry]";
 	if there is a blank_flag entry:
@@ -476,9 +496,15 @@ Instead of selecting a row_label listed in the current conversation table:
 		blank out the whole row;
 	reorder labels;
 	say "[line break]";
+	if homeless is introduced and label is 1:
+		now actor is helper;
+		now homeless is waiting_help;
+	otherwise if homeless is waiting_help:
+		now homeless is helped;
+	otherwise if homeless is helped:
+		now homeless is forgiven;
 	if end_chat is 1:
 		end the conversation;
-		say "[line break][line break]You are alone again, no more conversations.";
 	otherwise:
 		display chat.
 	
@@ -541,6 +567,18 @@ To display chat:
 To end the conversation:
 	restore chat table;
 	Now the player is idle;
+	if homeless is forgiven:
+		now homeless carries ruby stone;
+		now the player carries Heartshaped key;
+	if homeless is helped:
+		say "You pick the key from homeless.[line break]";
+		now the player carries a Gray key;
+		now current conversation table is Table of You returned;
+	if homeless is waiting_help:
+		say "I am at Garage Room, you need to find a way to open its door![line break][line break][line break]You are alone again, no more conversations.";
+		now current conversation table is Table of You helped me;
+	if homeless is introduced:
+		say "[line break][line break]You are alone again, no more conversations.";
 	if homeless is anonymous:
 		now homeless is introduced;
 		now current conversation table is Table of Could Help Me;
@@ -609,7 +647,16 @@ with 20 blank rows
 Table of Could Help Me
 option	reply	row_label	blank_flag	end_chat_flag	last_flag
 "[row_label in row 1 of current conversation table]: 'Yes'"	"'Fine, follow my instructions.' he replies."	0	1	1	"b"
-"[row_label in row 1 of current conversation table]: 'No'"	"'Okay, if you change your mind, ask me again.' he replies."	0	1	1	"b"
+"[row_label in row 2 of current conversation table]: 'No'"	"'Okay, if you change your mind, ask me again.' he replies."	0	1	1	"b"
+
+Table of You helped me
+option	reply	row_label	blank_flag	end_chat_flag	last_flag
+"[row_label in row 1 of current conversation table]: 'Ok, here I am. You can go away'"	"'Thank you so much.[line break]Take this key, I found it in the Hall.[line break]Maybe it opens a door somewhere around there' he replies."	0	1	1	"b"
+"[row_label in row 2 of current conversation table]: 'Ohh, here you are... You are hurt? Needs more help?'"	"'No, I am fine. Just a pain in my legs, thats okay.[line break]Take a key I found in the Hall, it can be useful to you.' he replies."	0	1	1	"b"
+
+Table of You returned
+option	reply	row_label	blank_flag	end_chat_flag	last_flag
+"[row_label in row 1 of current conversation table]: 'I got this ruby stone, take it.'"	"'Wow! Very good treasure![line break]I have a gift for you.[line break]The homeless gaves you another key.' he replies."	0	1	1	"b"
 
 Chapter 6 - Cheating
 
@@ -625,3 +672,26 @@ Carry out movingLR:
 		
 Report movingLR:
 	say "Now you are in the Living Room".
+
+Understand "move to Kitchen" as movingKT.	
+MovingKT is an action applying to nothing
+
+Carry out movingKT:
+		try silently entering yellow door;
+		try silently entering green door.
+		
+Report movingKT:
+	say "Now you are in the Kitchen Room".
+	
+Understand "move to Garage" as movingGA.
+
+MovingGA is an action applying to nothing
+
+Carry out movingGA:
+		try silently taking orange key;
+		now orange door is unlocked;
+		try entering orange door;
+		now player carries ruby stone.
+		
+Report movingGA:
+	say "Now you are in the Garage".
