@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-128"/>
+  <activeNode nodeId="node-171"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Coming Home</command>
-    <result xml:space="preserve">A chilling wind blows in the late afternoon. You catch sight of the house that you have to evaluate. The house scares you and you try to gain some confidence: "Ok Carlos, it is just another house to evaluate. You've done this on hundreds houses before. Just get in, see all the rooms, and get out. Very simple.". Still, the fact that it is the only house in the street gives signs that something is wrong.&#x000A;&#x000A;Coming Home&#x000A;An Interactive Fiction by Cl&#x00F3;vis, Ramiro and Pedro&#x000A;Release 1 / Serial number 190814 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Porch&#x000A;The entrance shows the house's condition. Old and abandoned.&#x000A;&#x000A;You can see Main door, Main key, Wooden chair, Old box (in which are candle and string), bucket (empty) and a bear trap (in which is dog) here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">A chilling wind blows in the late afternoon. You catch sight of the house that you have to evaluate. The house scares you and you try to gain some confidence: "Ok Carlos, it is just another house to evaluate. You've done this on hundreds houses before. Just get in, see all the rooms, and get out. Very simple.". Still, the fact that it is the only house in the street gives signs that something is wrong.&#x000A;&#x000A;Coming Home&#x000A;An Interactive Fiction by Cl&#x00F3;vis, Ramiro and Pedro&#x000A;Release 1 / Serial number 190814 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Upper Hall&#x000A;The decoration in this room is creepy. This room has stairs which gives access to the lower floor. And down the stairs, you see the Hall and the Main Door.&#x000A;&#x000A;The stairs are... weird?&#x000A;&#x000A;You can also see Heart-painted door, Purple door, Scratched door, Black door and Stone Statue here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-2"/>
       <child nodeId="node-3"/>
@@ -20,6 +20,12 @@
       <child nodeId="node-94"/>
       <child nodeId="node-108"/>
       <child nodeId="node-119"/>
+      <child nodeId="node-129"/>
+      <child nodeId="node-132"/>
+      <child nodeId="node-136"/>
+      <child nodeId="node-155"/>
+      <child nodeId="node-163"/>
+      <child nodeId="node-171"/>
     </children>
   </item>
   <item nodeId="node-2">
@@ -103,13 +109,15 @@
     <command xml:space="preserve">enter main door</command>
     <result xml:space="preserve">(first opening Main door)&#x000A;&#x000A;Hall&#x000A;The room is dark and difficult to see without light.&#x000A;&#x000A;The stairs are... weird?&#x000A;&#x000A;You can also see Gray door, Main door, Red door and Wooden Table (on which is family photograph) here.&#x000A;&#x000A;The inside smells as bad news...&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <children>
       <child nodeId="node-12"/>
       <child nodeId="node-13"/>
       <child nodeId="node-15"/>
       <child nodeId="node-27"/>
       <child nodeId="node-28"/>
+      <child nodeId="node-133"/>
+      <child nodeId="node-149"/>
     </children>
   </item>
   <item nodeId="node-12">
@@ -313,13 +321,197 @@
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
+  <item nodeId="node-133">
+    <command xml:space="preserve">enter red door</command>
+    <result xml:space="preserve">(first opening Red door)&#x000A;&#x000A;Living Room&#x000A;This room is oddly empty, like a hurricane has passed by removing all the furniture. Only 4 doors can be seen.&#x000A;&#x000A;You can see White door, Red door, Brown door and Yellow door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-134"/>
+    </children>
+  </item>
+  <item nodeId="node-134">
+    <command xml:space="preserve">enter yellow door</command>
+    <result xml:space="preserve">(first opening Yellow door)&#x000A;&#x000A;Dining Room&#x000A;The dining room looks like to be more conserved than the other rooms. The forniture is fancy, but very strange.&#x000A;&#x000A;You can see Yellow door, Green door, Large Wooden Table (on which is fresh apple), Old Chair and Shelf (on which is strange photograph) here.&#x000A;&#x000A;You hear something knocking the wall out there.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-135"/>
+    </children>
+  </item>
+  <item nodeId="node-135">
+    <command xml:space="preserve">enter green door</command>
+    <result xml:space="preserve">(first opening Green door)&#x000A;&#x000A;Kitchen&#x000A;It seems to be a normal kitchen, but not used for a lonf time. There are rotten food in the cabinet and a few dead rats on the floor. The smell is intolerable. You feel seasick only by staying in this room.&#x000A;&#x000A;You can see Green door, Orange door, Furnace (on which is old pressure cooker), Simple Table (on which are an Orange key and dirty napkin) and Cabinet (empty) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-137"/>
+    </children>
+  </item>
+  <item nodeId="node-137">
+    <command xml:space="preserve">enter green door</command>
+    <result xml:space="preserve">Dining Room&#x000A;The dining room looks like to be more conserved than the other rooms. The forniture is fancy, but very strange.&#x000A;&#x000A;You can see Green door, Yellow door, Large Wooden Table (on which is fresh apple), Old Chair and Shelf (on which is strange photograph) here.&#x000A;&#x000A;You really heard someone shouting in the next room.&#x000A;You can respond this supplicant or simply ignore it!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-138"/>
+    </children>
+  </item>
+  <item nodeId="node-138">
+    <command xml:space="preserve">take fresh apple</command>
+    <result xml:space="preserve">Suddenly, the apple begins to rot in your hands, the radio turn on and start to play strange sounds. You can hear strange heart beats coming from the eletronic device.&#x000A;&#x000A;The unidentified noise is still coming from the Garage.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-139"/>
+    </children>
+  </item>
+  <item nodeId="node-139">
+    <command xml:space="preserve">left</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-140"/>
+    </children>
+  </item>
+  <item nodeId="node-140">
+    <command xml:space="preserve">go left</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-141"/>
+    </children>
+  </item>
+  <item nodeId="node-141">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;The unidentified noise is still coming from the Garage.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-142"/>
+    </children>
+  </item>
+  <item nodeId="node-142">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Living Room&#x000A;This room is oddly empty, like a hurricane has passed by removing all the furniture. Only 4 doors can be seen.&#x000A;&#x000A;You can see Yellow door, White door, Red door and Brown door here.&#x000A;&#x000A;The unidentified noise is still coming from the Garage.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-143"/>
+    </children>
+  </item>
+  <item nodeId="node-143">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Dining Room&#x000A;The dining room looks like to be more conserved than the other rooms. The forniture is fancy, but very strange.&#x000A;&#x000A;You can see Yellow door, Green door, Large Wooden Table, Old Chair and Shelf (on which is strange photograph) here.&#x000A;&#x000A;The unidentified noise is still coming from the Garage.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-144"/>
+    </children>
+  </item>
+  <item nodeId="node-144">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">Kitchen&#x000A;It seems to be a normal kitchen, but not used for a lonf time. There are rotten food in the cabinet and a few dead rats on the floor. The smell is intolerable. You feel seasick only by staying in this room.&#x000A;&#x000A;You can see Green door, Orange door, Furnace (on which is old pressure cooker), Simple Table (on which are an Orange key and dirty napkin) and Cabinet (empty) here.&#x000A;&#x000A;The unidentified noise is still coming from the Garage.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-145"/>
+    </children>
+  </item>
+  <item nodeId="node-145">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">(first opening Orange door)&#x000A;It seems to be locked.&#x000A;&#x000A;The unidentified noise is still coming from the Garage.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-146"/>
+    </children>
+  </item>
+  <item nodeId="node-146">
+    <command xml:space="preserve">give rotten apple</command>
+    <result xml:space="preserve">(to the homeless)&#x000A;You can't reach into Garage.&#x000A;&#x000A;The unidentified noise is still coming from the Garage.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-147"/>
+    </children>
+  </item>
+  <item nodeId="node-147">
+    <command xml:space="preserve">examine rotten apple</command>
+    <result xml:space="preserve">You see nothing special about rotten apple.&#x000A;&#x000A;It has a terrible smell.&#x000A;&#x000A;The unidentified noise is still coming from the Garage.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-148"/>
+    </children>
+  </item>
+  <item nodeId="node-148">
+    <command xml:space="preserve">go to garage</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-149">
+    <command xml:space="preserve">enter stairs</command>
+    <result xml:space="preserve">Ot&#x00E1;rio.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-150"/>
+    </children>
+  </item>
+  <item nodeId="node-150">
+    <command xml:space="preserve">examine zeta stone</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-151"/>
+    </children>
+  </item>
+  <item nodeId="node-151">
+    <command xml:space="preserve">give zeta stone to Stone Statue</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-152"/>
+    </children>
+  </item>
+  <item nodeId="node-152">
+    <command xml:space="preserve">examine main key</command>
+    <result xml:space="preserve">An old and robust key. It seems like it is not used for more than 10 years. Probably opens the Main Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-153"/>
+    </children>
+  </item>
+  <item nodeId="node-153">
+    <command xml:space="preserve">give main key to stone statue</command>
+    <result xml:space="preserve">You can only do that to something animate.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-154"/>
+    </children>
+  </item>
+  <item nodeId="node-154">
+    <command xml:space="preserve">give main key to stone statue</command>
+    <result xml:space="preserve">You can only do that to something animate.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
   <item nodeId="node-36">
     <command xml:space="preserve">enter door</command>
-    <result xml:space="preserve">(first opening Main door)&#x000A;&#x000A;Hall&#x000A;You can see Gray door, Main door, Red door and Wooden Table (on which is family photograph) here.&#x000A;&#x000A;The inside smells as bad news...&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">(first opening Main door)&#x000A;&#x000A;Hall&#x000A;The room is dark and difficult to see without light.&#x000A;&#x000A;The stairs are... weird?&#x000A;&#x000A;You can also see Gray door, Main door, Red door and Wooden Table (on which is family photograph) here.&#x000A;&#x000A;The inside smells as bad news...&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
       <child nodeId="node-37"/>
+      <child nodeId="node-168"/>
     </children>
   </item>
   <item nodeId="node-37">
@@ -343,6 +535,30 @@
   <item nodeId="node-39">
     <command xml:space="preserve">enter red door</command>
     <result xml:space="preserve">Living Room&#x000A;You can see White door, Red door, Brown door and Yellow door here.&#x000A;&#x000A;Algu&#x00E9;m est&#x00E1; gritando pedindo ajuda.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-168">
+    <command xml:space="preserve">enter stair</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-169"/>
+    </children>
+  </item>
+  <item nodeId="node-169">
+    <command xml:space="preserve">enter stairs</command>
+    <result xml:space="preserve">Ot&#x00E1;rio.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-170"/>
+    </children>
+  </item>
+  <item nodeId="node-170">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Hall&#x000A;The room is dark and difficult to see without light.&#x000A;&#x000A;The stairs are... weird?&#x000A;&#x000A;You can also see Gray door, Main door, Red door and Wooden Table (on which is family photograph) here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -975,9 +1191,10 @@
     <command xml:space="preserve">move to living room</command>
     <result xml:space="preserve">A chill runs up your spine&#x000A;(first opening Main door)&#x000A;(first opening Red door)&#x000A;Now you are in the Living Room&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-109"/>
+      <child nodeId="node-164"/>
     </children>
   </item>
   <item nodeId="node-109">
@@ -1067,6 +1284,39 @@
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
+  <item nodeId="node-164">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Hall&#x000A;The room is dark and difficult to see without light.&#x000A;&#x000A;The stairs are... weird?&#x000A;&#x000A;You can also see Red door, Gray door, Main door and Wooden Table (on which is family photograph) here.&#x000A;&#x000A;The inside smells as bad news...&#x000A;&#x000A;You hear something knocking the wall out there.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-165"/>
+    </children>
+  </item>
+  <item nodeId="node-165">
+    <command xml:space="preserve">enter stairs</command>
+    <result xml:space="preserve">Upper Hall&#x000A;The decoration in this room is creepy. This room has stairs which gives access to the lower floor. And down the stairs, you see the Hall and the Main Door.&#x000A;&#x000A;The stairs are... weird?&#x000A;&#x000A;You can also see Heart-painted door, Purple door, Black door, Scratched door and Stone Statue here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-166"/>
+    </children>
+  </item>
+  <item nodeId="node-166">
+    <command xml:space="preserve">interact with stone statue</command>
+    <result xml:space="preserve">You don't have something to interact with this Statue.&#x000A;&#x000A;You really heard someone shouting in the next room.&#x000A;You can respond this supplicant or simply ignore it!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-167"/>
+    </children>
+  </item>
+  <item nodeId="node-167">
+    <command xml:space="preserve">examine stone statue</command>
+    <result xml:space="preserve">A scaring statue holding still, like if it is almost moving. You can deduce that it has two ruby eyes. One is in the statue, the other one is missing. Maybe if I find the lost eye, It will be possible to "interact with" the Statue.&#x000A;&#x000A;The unidentified noise is still coming from the Garage.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
   <item nodeId="node-119">
     <command xml:space="preserve">release dog</command>
     <result xml:space="preserve">Go away dog!&#x000A;&#x000A;You saved the dog from the trap. He is very thankful.&#x000A;&#x000A;&gt;</result>
@@ -1106,6 +1356,121 @@
   <item nodeId="node-128">
     <command xml:space="preserve">enter red door</command>
     <result xml:space="preserve">(first opening Red door)&#x000A;&#x000A;Living Room&#x000A;This room is oddly empty, like a hurricane has passed by removing all the furniture. Only 4 doors can be seen.&#x000A;&#x000A;You can see White door, Red door, Brown door and Yellow door here.&#x000A;&#x000A;The End.&#x000A;Good End. Dog Helps.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-129">
+    <command xml:space="preserve">take main key</command>
+    <result xml:space="preserve">A chill runs up your spine&#x000A;Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-130"/>
+      <child nodeId="node-162"/>
+    </children>
+  </item>
+  <item nodeId="node-130">
+    <command xml:space="preserve">give main key to wooden chair</command>
+    <result xml:space="preserve">You can only do that to something animate.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-131"/>
+    </children>
+  </item>
+  <item nodeId="node-131">
+    <command xml:space="preserve">use main key</command>
+    <result xml:space="preserve">I didn't understand that number.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-162">
+    <command xml:space="preserve">interact with dog</command>
+    <result xml:space="preserve">Ass.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-132">
+    <command xml:space="preserve">take marble toilet</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-136">
+    <command xml:space="preserve">examine main key</command>
+    <result xml:space="preserve">An old and robust key. It seems like it is not used for more than 10 years. Probably opens the Main Door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-155">
+    <command xml:space="preserve">put</command>
+    <result xml:space="preserve">What do you want to put?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-156"/>
+    </children>
+  </item>
+  <item nodeId="node-156">
+    <command xml:space="preserve">main key</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-157"/>
+    </children>
+  </item>
+  <item nodeId="node-157">
+    <command xml:space="preserve">unlock main door</command>
+    <result xml:space="preserve">What do you want to unlock Main door with?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-158"/>
+    </children>
+  </item>
+  <item nodeId="node-158">
+    <command xml:space="preserve">main key</command>
+    <result xml:space="preserve">(first taking Main key)&#x000A;A chill runs up your spine&#x000A;You unlock Main door.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-159"/>
+    </children>
+  </item>
+  <item nodeId="node-159">
+    <command xml:space="preserve">enter main door</command>
+    <result xml:space="preserve">(first opening Main door)&#x000A;&#x000A;Hall&#x000A;The room is dark and difficult to see without light.&#x000A;&#x000A;The stairs are... weird?&#x000A;&#x000A;You can also see Gray door, Main door, Red door and Wooden Table (on which is family photograph) here.&#x000A;&#x000A;The inside smells as bad news...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-160"/>
+    </children>
+  </item>
+  <item nodeId="node-160">
+    <command xml:space="preserve">enter stairs</command>
+    <result xml:space="preserve">Upper Hall&#x000A;The decoration in this room is creepy. This room has stairs which gives access to the lower floor. And down the stairs, you see the Hall and the Main Door.&#x000A;&#x000A;The stairs are... weird?&#x000A;&#x000A;You can also see Heart-painted door, Purple door, Black door, Scratched door and Stone Statue here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-161"/>
+    </children>
+  </item>
+  <item nodeId="node-161">
+    <command xml:space="preserve">put main key</command>
+    <result xml:space="preserve">Ass.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+  </item>
+  <item nodeId="node-163">
+    <command xml:space="preserve">interact with dog</command>
+    <result xml:space="preserve">Ass 2.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-171">
+    <command xml:space="preserve">enter stairs</command>
+    <result xml:space="preserve">Pode ir, senhor.&#x000A;&#x000A;Hall&#x000A;The room is dark and difficult to see without light.&#x000A;&#x000A;The stairs are... weird?&#x000A;&#x000A;You can also see Gray door, Main door, Red door and Wooden Table (on which is family photograph) here.&#x000A;&#x000A;The inside smells as bad news...&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>

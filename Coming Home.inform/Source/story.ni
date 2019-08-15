@@ -45,6 +45,24 @@ Carry out releasing:
 	Say "Go away [the noun]![line break]";
 	Now dog is in the Porch.
 
+Section 1.4 Interact With
+
+Understand "interact with [something]" as interacting.
+Interacting  is an action applying to one thing.
+Carry out interacting:
+	if player carries ruby stone:
+		if the noun is Stone Statue:
+			say "You put the ruby stone in the eye of the statue.  Nothing happens so you turn around and go on with your job... [line break]";
+			say "But them you hear from behind stones breaking. When you look around you can see the Stone Statue coming alive, with it's red-ruby eyes glowing like you never saw before. The monster begins to walk in your direction. You are mesmerized and can't move a muscle. The statue grabs you neck with both hands and starts to hang you. ";
+			if Saved is 1:
+				say "You can see the dog you saved getting upstairs and trying to help you, but the statue is too strong.";
+			otherwise:
+				say "You hear the dog in the porch barking. And then everything goes dark...";
+			say "[line break] REALLY BAD ENDING";
+			end the story;
+	otherwise:
+		say "You don't have something to interact with this Statue.";
+
 Chapter 2 Geography
 
 Section 2.1 Rooms
@@ -100,6 +118,13 @@ Purple door is a door. It is north of Bathroom and south of Upper Hall. Purple d
 Heart-painted door is a door. It is west of Medium Bedroom and east of Upper Hall. Heart-painted door is closed and locked.
 The matching key of the Heart-painted door is the Heartshaped key.
 
+Instead of entering the stairs:
+	if Player is in Hall:
+		say "A escada vira um escorrega e você permanece no Hall.";
+	otherwise:
+		say "A escada se comporta normalmente e você desce para o Hall";
+		continue the action;
+
 Section 2.3 Regions
 
 First Floor is a region. The Hall, Living Room, Garage, Kitchen, Dining Room, Home Office and Lavabo are in First Floor.
@@ -107,7 +132,7 @@ Second Floor is a region. The Upper Hall, The Large Bedroom, the medium bedroom,
 
 Chapter 3 Things
 
-Player is in Porch.  
+Player is in Porch. 
 
 Section 3.1 On the Porch
 
@@ -148,32 +173,41 @@ Section 3.3 On the Living Room
 
 Section 3.4 On the Dining Room
 
-Large Wooden Table is in Dining Room.
+Large Wooden Table is in Dining Room. It is fixed in place.
 Large Wooden Table is supporter.
 
 fresh apple is on Large Wooden Table.
 The description of fresh apple is "A normal, red and fresh apple."
 
-Old Chair is a chair. Old chair is in Dining Room.
+After taking fresh apple:
+	say "Suddenly, the apple begins to rot in your hands, the radio turn on and start to play strange sounds. You can hear strange heart beats coming from the eletronic device.";
+	now Player carries rotten apple;
+	now fresh apple is nowhere;
+	
+Old Chair is a chair. Old chair is in Dining Room. 
 The description of Old Chair is "A fancy chair. But a closer look to the chair foot shows that the chair is physically linked to the floor. Like if it had roots."
 
-Shelf is in Dining Room. 
+Shelf is in Dining Room. It is fixed in place.
 Shelf is supporter.
 
 strange photograph is a thing.
 strange photograph is on Shelf.
-The description of strange photograph is "There is a old woman writing or drawing something behind a painting."
-After taking strange photograph, say "".
+
+After taking strange photograph, say "I should take a closer look.".
+After examining strange photograph, say "There is a old woman writing or drawing something behind a painting."
+
+rotten apple is a thing.
+After examining rotten apple, say "It has a terrible smell.".
 
 Section 3.5 On the Kitchen
 
-Furnace is in Kitchen.
+Furnace is in Kitchen. It is fixed in place.
 Furnace is supporter.
 
 old pressure cooker is a thing.
 old pressure cooker is on Furnace.
 
-Simple Table is in Kitchen.
+Simple Table is in Kitchen. It is fixed in place.
 Simple Table is supporter.
 
 Orange Key is on Simple Table. 
@@ -182,7 +216,7 @@ The description of Orange Key is "It is pretty clear that it opens the orange do
 dirty napkin is on Simple Table.
 The description of dirty napkin is "A napkin with all sort of stains. Food, juice... blood."
 
-Cabinet is in Kitchen.
+Cabinet is in Kitchen. It is fixed in place.
 Cabinet is container.
 
 Section 3.6 On the Garage
@@ -197,24 +231,24 @@ The homeless is a man. It is in the Garage.
 
 Section 3.7 On the Lavabo
 
-Old Mirror is in Lavabo.
+Old Mirror is in Lavabo. It is fixed in place.
 The description of old mirror is "The mirror frame is made of gold. Well detailed. When look inside the mirror you see... another room?"
 
 After examining Old Mirror:
 	say "Teleporte, bichouuuuu.";
 	now Player is in Inner Bathroom.
 
-Toilet is in Lavabo.
+Toilet is in Lavabo. It is fixed in place.
 The description of Toilet is "Impossible to use."
 
 dirty towel is in Lavabo. 
 The description of dirty towel is "All dirty of blood."
 
-Wash Basin is in Lavabo.
+Wash Basin is in Lavabo. It is fixed in place.
 
 Section 3.8 On the Home Office
 
-Safe Box is in Home Office.
+Safe Box is in Home Office. It is fixed in place.
 Safe Box is container. It is locked.
 The description of Safe Box is "A locked safe box. It looks like it holds something valuable. Maybe the code is hidden somewhere in the house".
 
@@ -224,7 +258,7 @@ The description of ruby stone is "A very bright ruby. Its color is a hot red tha
 battery is in Safe Box.
 The description of battery is "It can be used to turn on eletrical equipments."
 
-Writing Desk is in Home Office.
+Writing Desk is in Home Office. It is fixed in place.
 Writing Desk is supporter.
 The description of Writing Desk is "Full of papers."
 
@@ -233,62 +267,70 @@ The description of mysterious photograph is "The photo shows two kids hugging th
 
 Section 3.9 On the Upper Hall
 
-Stone Statue is in Upper Hall.
-The description of Stone Statue is "A scaring statue holding still, like if it is almost moving. You can deduce that it has two ruby eyes. One is in the statue, the other one is missing."
+Stone Statue is in Upper Hall. It is fixed in place.
+
+The description of Stone Statue is "A scaring statue holding still, like if it is almost moving. You can deduce that it has two ruby eyes. One is in the statue, the other one is missing. Maybe if I find the lost eye, It will be possible to 'interact with' the Statue.";
 
 Section 3.10 On the Inner Bathroom
 
-Marble Wash Basin is in Inner Bathroom. It is supporter.
+Marble Wash Basin is in Inner Bathroom. It is supporter. It is fixed in place.
 Soap is on Marble Wash Basin.
 
-Bathtub is in Inner Bathroom.
+Bathtub is in Inner Bathroom. It is fixed in place.
 The description of Bathtub is "There is a corpse in it."
 
-Dirty Mirror is in Inner Bathroom.
+Dirty Mirror is in Inner Bathroom. It is fixed in place.
 The description of Dirty Mirror is "Similar to the other mirrors on the house. You can see the Lavabo."
 
 After examining Dirty Mirror:
 	say "Teleporte, bichouuuuu.";
 	now Player is in Lavabo.
 
-Marble Toilet is in Inner Bathroom.
+Marble Toilet is in Inner Bathroom. It is fixed in place.
 
 Section 3.11 On the Large Bedroom
 
-Beautiful Painting is in Large Bedroom.
+Beautiful Painting is in Large Bedroom. 
 The description of Beautiful Painting is "A beautifull painting decoring the wall. You have a feel that you have already seen this painting somewhere."
+
+After examining Beautiful Painting:
+	say "Behind the painting is written 314. You write the sequence in a piece of paper. Maybe It will be usefull.";
+	Now player carries number sequence.
 
 Large Bed is in Large Bedroom.
 
-Wardrobe is in Large Bedroom. 
+Wardrobe is in Large Bedroom. It is fixed in place.
 Wardrobe is container.
 
 moldy shirt is a thing. 
 moldy shirt is in Wardrobe.
 
+number sequence is a thing. 
+After examining number sequence, say "You wrote 314.";
+
 Section 3.12 On the Medium Bedroom
 
 Section 3.13 On the Small Bedroom
 
-Small Bed is in Small Bedroom.
+Small Bed is in Small Bedroom. It is fixed in place.
 Small Bed is supporter.
 The description of Small Bed is "It is all dirty of blood. There is a corpse on it."
 
 Little Girl's Corpse is a thing.
-Little Girl's Corpse is on Small Bed. It is fixed in place. [Isso tem que ser fixo]
+Little Girl's Corpse is on Small Bed. It is fixed in place.
 The description of Little Girl's Corpse is "A young girl is dead. It appears that she was sleeping before dye."
 
-Small Wardrobe is in Small Bedroom.
+Small Wardrobe is in Small Bedroom. It is fixed in place.
 Small Wardrome is container.
 
 pink dress is on Small Wardrobe.
 
 Section 3.14 On the Bathroom
 
-Stained Bathtub is in Bathroom.
+Stained Bathtub is in Bathroom. It is fixed in place.
 The description of Stained Bathtub is "The bathtub is full of a dense dark water. There is a corpse in it."
 
-Old Man's Corpse is a thing.
+Old Man's Corpse is a thing. It is fixed in place.
 Old Man's Corpse is on Stained Bathtub.
 The description of Old Man's Corpse is "This man died a long ago. There is something on his chest."
 After examining Old Man's Corpse:
@@ -334,8 +376,10 @@ When Ending begins:
 	say "The End.";
 	if Saved is 1:
 		say "Good End. Dog Helps.";
+		say "[line break] GOOD ENDING. Congratulations!";
 	otherwise:
 		say "Bad End. Died.";
+		say "[line break] BAD ENDING.";
 	end the story.
 		
 Chapter 5 - NPCs
