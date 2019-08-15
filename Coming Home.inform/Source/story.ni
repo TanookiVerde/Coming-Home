@@ -275,7 +275,7 @@ Small Bed is supporter.
 The description of Small Bed is "It is all dirty of blood. There is a corpse on it."
 
 Little Girl's Corpse is a thing.
-Little Girl's Corpse is on Small Bed. [Isso tem que ser fixo]
+Little Girl's Corpse is on Small Bed. It is fixed in place. [Isso tem que ser fixo]
 The description of Little Girl's Corpse is "A young girl is dead. It appears that she was sleeping before dye."
 
 Small Wardrobe is in Small Bedroom.
@@ -291,11 +291,9 @@ The description of Stained Bathtub is "The bathtub is full of a dense dark water
 Old Man's Corpse is a thing.
 Old Man's Corpse is on Stained Bathtub.
 The description of Old Man's Corpse is "This man died a long ago. There is something on his chest."
-
-Wrinkled Clothes is in Bathroom.
-
-White Key is in Wrinkled Clothes.
-The description of White Key is "It is pretty clear that it opens the orange door."
+After examining Old Man's Corpse:
+	Say "You find a white key in his chest.";
+	now Player carries White Key;
 
 Chapter 4 What Happens when entering
 
@@ -320,18 +318,10 @@ Section 4.1 Homeless Asks For Help
 Homeless Asks For Help is a scene.
 Homeless Asks For Help begins when the Player is in the Living Room for the first time.
 
-[When Homeless Asks For Help begins:
-	say "In the moment you enter in the room, you hear someone on your left screaming for help, coming from the brown door. [line break]";
-	say "A men screams for help saying that he entered by the window and felt, now he can't leave anymore."; ]
-
 Section 4.2 Homeless Receives Help
 
 Homeless Receives Help is a scene. 
 Homeless Receives Help begins when the Player is in the Garage for the first time.
-
-When Homeless Receives Help begins:
-	say "'Ah! Finally you arrived.... Take this as reward,' said the homeless.";
-	now Player carries Gray key;
 
 Section 4.3 Used Ruby on Statue
 
@@ -346,6 +336,7 @@ When Ending begins:
 		say "Good End. Dog Helps.";
 	otherwise:
 		say "Bad End. Died.";
+	end the story.
 		
 Chapter 5 - NPCs
 
