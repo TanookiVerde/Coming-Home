@@ -3,7 +3,7 @@
     <story>
         <identification>
             <ifid>AFED7449-E600-46F2-A8B7-F5C142F40AA1</ifid>
-            <format>glulx</format>
+            <format>zcode</format>
         </identification>
         <bibliographic>
             <title>Coming Home</title>
@@ -29,10 +29,10 @@
             <generatorversion>6M62</generatorversion>
             <originated>2019-08-15</originated>
         </colophon>
-        <glulx>
+        <zcode>
             <serial>190815</serial>
             <release>1</release>
             <compiler>Inform 7 build 6M62</compiler>
-        </glulx>
+        </zcode>
     </story>
 </ifindex>

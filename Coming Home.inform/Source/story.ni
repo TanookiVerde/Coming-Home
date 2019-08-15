@@ -403,11 +403,14 @@ Noise-Heard is a truth state which varies. Noise-Heard is false.
 Second-Noise-Heard is a truth state which varies. Second-Noise-Heard is false.
 
 At the time when first strange noise happens:
-	Say "You hear something knocking the wall out there.";
+	if homeless is annoyer:
+		Say "You hear something knocking the wall out there.";
 	Now Noise-Heard is true.
+		
 
 At the time when second strange noise happens:
-	Say "You really heard someone shouting in the next room.[line break]You can respond this supplicant or simply ignore it!";
+	if homeless is annoyer:
+		Say "You really heard someone shouting in the next room.[line break]You can respond this supplicant or simply ignore it!";
 	Now Second-Noise-Heard is true.
 
 Every turn when Noise-Heard is true and Second-Noise-Heard is true and homeless is not proper-named:
@@ -420,11 +423,12 @@ Appearance relates various persons to various features. The verb to appear means
 
 The homeless appears grimy and smelly and ragged and hurt.
 The homeless carries an Gray key.
-The homeless is either anonymous or introduced or waiting_help or helped or forgiven. The homeless is anonymous.
+The homeless is either annoyer, anonymous or introduced or waiting_help or helped or forgiven. The homeless is annoyer.
 
 Instead of examining the homeless for the first time: 
 	now the printed name of the homeless is "Charles";
 	now the homeless is proper-named;
+	now the homeless is anonymous;
 	say "The homeless introduced himself to you and his name is Charles.[line break]Maybe he has something to tell you..."
 
 Understand "Charles" as the homeless when the homeless is proper-named.
@@ -463,7 +467,17 @@ After going to the Garage:
 			say "We have a deal and I'm here to give to you something.[line break]";
 			try talking to homeless;
 		otherwise:
-			say "The homeless looked to you and said: 'You have nothing to me, go away!'".
+			say "The homeless looked to you and said: 'You have nothing to me, go away!'";
+	otherwise if homeless is annoyer:
+		try looking;
+		say "Interesting... there is a homeless here!";
+		try examining homeless;
+	otherwise if homeless is anonymous:
+		try looking;
+		say "Okay... here is the homeless! Maybe you can help him.";
+	otherwise if homeless is introduced:
+		try looking;
+		say "Gotcha! The homeless again. Maybe you can help him.".
 
 	
 [ Define conversation ]
@@ -474,7 +488,8 @@ Talking to is an action applying to one visible thing.
 Understand "talk to [someone]" or "converse with [someone]" as talking to.
 
 Check talking to:
-	if homeless is waiting_help and player is not  in the Garage, say "I'm waiting for you, for now that's enough. [line break]Run, help me, find a way to Garage Room!!" instead.
+	if homeless is waiting_help and player is not  in the Garage, say "I'm waiting for you, for now that's enough. [line break]Run, help me, find a way to Garage Room!!" instead;
+	if homeless is annoyer, say "There isn't anybody near to you." instead.
 Carry out talking to:
 	now the player is conversing;
 	now interlocutor is the noun;
@@ -667,6 +682,32 @@ option	reply	row_label	blank_flag	end_chat_flag	last_flag
 "[row_label in row 1 of current conversation table]: 'I got this ruby stone, take it.'"	"'Wow! Very good treasure![line break]I have a gift for you.[line break]The homeless gaves you another key.' he replies."	0	1	1	"b"
 
 Chapter 6 - Cheating
+
+Understand "play until Living" as testLR.
+
+testLR is an action applying to nothing
+
+Carry out testLR:
+	try silently releasing dog;
+	try silently taking main key;
+	now main door is unlocked;
+	try silently entering main door;
+	try taking photograph;
+	try examining photograph;
+	try entering red door.
+
+Understand "play to Garage" as testGA.
+
+testGA is an action applying to nothing
+
+Carry out testGA:
+	try entering yellow door;
+	try taking apple;
+	try examining photograph;
+	try entering green door;
+	try taking orange key;
+	try unlocking orange door with orange key;
+	try entering orange door.
 
 Understand "move to Living Room" as movingLR.
 

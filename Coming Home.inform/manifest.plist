@@ -5,7 +5,7 @@
         <key>Graphics</key>
         <dict>
             <key>3</key>
-            <string>Figures\house.jpg</string>
+            <string>Figures/house.jpg</string>
         </dict>
     </dict>
 </plist>
